@@ -24,13 +24,13 @@
 <section>
 	<div class="team red">
 		<div class="buttons">
-			<button onclick={addPointsToRed(100)}>
+			<button onclick={() => addPointsToRed(100)}>
 				+ 100
 			</button>
-			<button onclick={addPointsToRed(200)}>
+			<button onclick={() => addPointsToRed(200)}>
 				+ 200
 			</button>
-			<button onclick={addPointsToRed(500)}>
+			<button onclick={() => addPointsToRed(500)}>
 				+ 500
 			</button>
 		</div>
@@ -38,13 +38,13 @@
 	</div>
 	<div class="team yellow">
 		<div class="buttons">
-			<button onclick={addPointsToYellow(100)}>
+			<button onclick={() => addPointsToYellow(100)}>
 				+ 100
 			</button>
-			<button onclick={addPointsToYellow(200)}>
+			<button onclick={() => addPointsToYellow(200)}>
 				+ 200
 			</button>
-			<button onclick={addPointsToYellow(500)}>
+			<button onclick={() => addPointsToYellow(500)}>
 				+ 500
 			</button>
 		</div>
@@ -58,7 +58,7 @@
 	}
 
 	button {
-		background-color: dark-purple;
+		background-color: purple;
 		color: white;
 		padding: 0px 50px;
 		border-radius: 8px;
