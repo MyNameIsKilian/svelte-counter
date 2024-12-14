@@ -13,6 +13,10 @@
 	function addPointsToYellow(points) {
 		scoreTeamYellow += points;
 	}
+
+	function reset(color) {
+		color == "red" ? scoreTeamRed = 0 : scoreTeamYellow = 0;
+	}
 </script>
 
 <svelte:head>
@@ -33,6 +37,9 @@
 			<button onclick={() => addPointsToRed(500)}>
 				+ 500
 			</button>
+			<button onclick={() => reset("red")}>
+				Reset
+			</button>
 		</div>
 		<span>{scoreTeamRed}</span>
 	</div>
@@ -46,6 +53,9 @@
 			</button>
 			<button onclick={() => addPointsToYellow(500)}>
 				+ 500
+			</button>
+			<button onclick={() => reset("yellow")}>
+				Reset
 			</button>
 		</div>
 		<span>{scoreTeamYellow}</span>
@@ -62,7 +72,7 @@
 		color: white;
 		padding: 0px 50px;
 		border-radius: 8px;
-		border: none
+		border: none;
 		magin: 10px 30px;
 	}
 
