@@ -3,8 +3,8 @@
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 
-	let scoreTeamRed = 0;
-	let scoreTeamYellow = 0;
+	let scoreTeamRed = $state(0);
+	let scoreTeamYellow = $state(0);
 
 	function addPointsToRed(points) {
 		scoreTeamRed += points;
@@ -24,28 +24,28 @@
 <section>
 	<div class="team red">
 		<div class="buttons">
-			<button on:click={addPointsToRed(100)}>
-				+100
+			<button onclick={addPointsToRed(100)}>
+				+ 100
 			</button>
-			<button on:click={addPointsToRed(200)}>
-				+200
+			<button onclick={addPointsToRed(200)}>
+				+ 200
 			</button>
-			<button on:click={addPointsToRed(500)}>
-				+500
+			<button onclick={addPointsToRed(500)}>
+				+ 500
 			</button>
 		</div>
 		<span>{scoreTeamRed}</span>
 	</div>
 	<div class="team yellow">
 		<div class="buttons">
-			<button on:click={addPointsToYellow(100)}>
-				+100
+			<button onclick={addPointsToYellow(100)}>
+				+ 100
 			</button>
-			<button on:click={addPointsToYellow(200)}>
-				+200
+			<button onclick={addPointsToYellow(200)}>
+				+ 200
 			</button>
-			<button on:click={addPointsToYellow(500)}>
-				+500
+			<button onclick={addPointsToYellow(500)}>
+				+ 500
 			</button>
 		</div>
 		<span>{scoreTeamYellow}</span>
@@ -60,14 +60,21 @@
 	button {
 		background-color: dark-purple;
 		color: white;
-		padding: 20px 50px;
+		padding: 0px 50px;
 		border-radius: 8px;
+		border: none
+		magin: 10px 30px;
+	}
+
+	span {
+		font-size: 250px;
 	}
 
 	.buttons {
 		display: flex;
 		justify-content: space-evenly;
 		height: 50px;
+		margin-bottom: 80px;
 	}
 
 	.team {
