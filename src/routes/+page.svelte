@@ -73,7 +73,8 @@
 		padding: 0px 50px;
 		border-radius: 8px;
 		border: none;
-		magin: 10px 30px;
+		margin: 10px 30px;
+		height: 50px;
 	}
 
 	span {
