@@ -17,18 +17,16 @@ team red
 	<div class="team yellow">
 team yellow
 	</div>
-	<Counter />
 </section>
 
 <style>
 	section {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
 	}
+
 	team {
 		flex-grow: 1;
+		width: 50%;
 	}
 
 	red {
@@ -43,3 +41,4 @@ team yellow
 		width: 100%;
 	}
 </style>
+
